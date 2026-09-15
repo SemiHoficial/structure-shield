@@ -27,7 +27,7 @@ The mod's core design goal is performance: block break/place events fire constan
 
 ### Data-driven protection via three tags
 
-Defaults ship in `src/main/resources/data/structure_shield/tags/`:
+Defaults ship as a bundled datapack at `src/main/resources/datapacks/defaults/` (registered in `StructureShield` via `AddPackFindersEvent` with `PackSource.BUILT_IN`, so it is enabled by default but can be turned off with `/datapack disable "mod/structure_shield:datapacks/defaults"`). Its tags live under `data/structure_shield/tags/`:
 
 - `worldgen/structure/structure_shield_protected.json` — structure tag: which structures are protected (defaults to most vanilla structures)
 - `block/structure_shield_breakable.json` — block tag: blocks players may still break inside protected structures (ores, crops, torches, decorations, etc.)

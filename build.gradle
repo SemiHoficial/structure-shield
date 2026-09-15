@@ -159,6 +159,12 @@ publishMods {
         serverRequired = true
     }
 
+    modrinth {
+        projectId = "ttpLLnhT"
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        minecraftVersions.add(minecraft_version)
+    }
+
     discord {
         webhookUrl = providers.environmentVariable("DISCORD_WEBHOOK_URL")
         dryRunWebhookUrl = providers.environmentVariable("DISCORD_WEBHOOK_TEST_URL")

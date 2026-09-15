@@ -1,3 +1,6 @@
+## 1.1.2
+- Default tags now ship as a bundled datapack (enabled by default) that can be disabled with `/datapack disable "mod/structure_shield:datapacks/defaults"`
+
 ## 1.1.1
 - Add support to stop fires from spreading
 - Add piston pushing protection (default off)
