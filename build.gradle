@@ -146,6 +146,7 @@ publishMods {
     changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
     version = "${minecraft_version}-${mod_version}"
     type = STABLE
+    dryRun = providers.environmentVariable("PUBLISH_DRY_RUN").map { it == "true" }.orElse(false)
     displayName = "structure_shield-${minecraft_version}-${mod_version}"
 
     curseforge {

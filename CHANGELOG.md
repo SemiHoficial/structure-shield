@@ -1,9 +1,3 @@
-## 1.1.2
-- Default tags now ship as a bundled datapack (enabled by default) that can be disabled with `/datapack disable "mod/structure_shield:datapacks/defaults"`
-
-## 1.1.1
-- Add support to stop fires from spreading
-- Add piston pushing protection (default off)
-- Now prevents placing and scooping water or other liquids, disableable via tag
-- Other fixes and refactors
-- Publish for 1.21.1 properly.
+## 1.2.0
+- Made default datapack optional instead of building it into the data. You can now use /datapack enable or /datapack disable with it.
+- If you already overwrite the tags it provides you will not need to do any changes, but you can also disable it just to be safe.
