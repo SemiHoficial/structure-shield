@@ -135,7 +135,7 @@ public class ModEvents {
         if (!(event.getLevel() instanceof ServerLevel level)) return;
 
         event.getAffectedBlocks().removeIf(pos ->
-                StructureShieldUtil.isRemovalBlocked(level, pos, level.getBlockState(pos).getBlock()));
+                StructureShieldUtil.isBlowingBlocked(level, pos, level.getBlockState(pos).getBlock()));
     }
 
     @SubscribeEvent

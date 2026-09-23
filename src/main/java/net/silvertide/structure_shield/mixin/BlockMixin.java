@@ -13,6 +13,9 @@ public class BlockMixin implements IBlock {
     @Unique
     private boolean structureShield$isPlaceable;
 
+    @Unique
+    private boolean structureShield$isBlowable;
+
     @Override
     public boolean structureShield$isBreakable() {
         return this.structureShield$isBreakable;
@@ -21,6 +24,16 @@ public class BlockMixin implements IBlock {
     @Override
     public void structureShield$setIsBreakable(boolean isBreakable) {
         this.structureShield$isBreakable = isBreakable;
+    }
+
+    @Override
+    public boolean structureShield$isBlowable() {
+        return this.structureShield$isBlowable;
+    }
+
+    @Override
+    public void structureShield$setIsBlowable(boolean isBreakable) {
+        this.structureShield$isBlowable = isBreakable;
     }
 
     @Override

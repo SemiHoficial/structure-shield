@@ -38,11 +38,13 @@ public class StructureShieldUtil {
     private static void updateBlockFields(HolderLookup.RegistryLookup<Block> blockRegistry) {
         blockRegistry.listElements().forEach(block -> {
             boolean isBreakable = block.is(ModTags.STRUCTURE_SHIELD_BREAKABLE);
+            boolean isBlowable = block.is(ModTags.STRUCTURE_SHIELD_BLOWABLE);
             boolean isPlaceable = block.is(ModTags.STRUCTURE_SHIELD_PLACEABLE);
 
             IBlock blockMixin = (IBlock) block.value();
 
             blockMixin.structureShield$setIsBreakable(isBreakable);
+            blockMixin.structureShield$setIsBlowable(isBlowable);
             blockMixin.structureShield$setIsPlaceable(isPlaceable);
         });
     }
@@ -54,6 +56,11 @@ public class StructureShieldUtil {
 
     public static boolean isRemovalBlocked(ServerLevel level, BlockPos pos, Block block) {
         if(((IBlock) block).structureShield$isBreakable()) return false;
+        return isProtectedPosition(level, pos);
+    }
+
+    public static boolean isBlowingBlocked(ServerLevel level, BlockPos pos, Block block) {
+        if(((IBlock) block).structureShield$isBlowable()) return false;
         return isProtectedPosition(level, pos);
     }
 

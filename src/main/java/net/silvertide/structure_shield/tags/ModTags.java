@@ -11,6 +11,9 @@ public class ModTags {
     public static final TagKey<Block> STRUCTURE_SHIELD_BREAKABLE =
             TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(StructureShield.MODID, "structure_shield_breakable"));
 
+    public static final TagKey<Block> STRUCTURE_SHIELD_BLOWABLE =
+            TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(StructureShield.MODID, "structure_shield_blowable"));
+
     public static final TagKey<Block> STRUCTURE_SHIELD_PLACEABLE =
             TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(StructureShield.MODID, "structure_shield_placeable"));
 
